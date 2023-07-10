@@ -12,7 +12,7 @@ Variables
 ======================
 */
 
-.root {
+:root {
   --clr-primary: #678e3e;
   --clr-primary-light: #deed8c;
   --clr-grey-1: #102a42;
@@ -130,6 +130,30 @@ p {
   display: table;
 }
 
+.section-title h3 {
+  color: #678e3e;
+  font-family: 'Grand Hotel', cursive;
+  letter-spacing: 0.4rem;
+}
+
+.section-title {
+  margin-bottom: 2rem;
+}
+
+.section-center {
+  padding: 4rem 0;
+  width: 85vw;
+  max-width: 1130px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+    padding: 4rem 1rem;
+  }
+}
+
 /* 
 ======================
 Header
@@ -226,5 +250,47 @@ Skills
 @media screen and (min-width: 1130px) {
   .skill {
     width: 25%;
+  }
+}
+/* 
+======================
+About
+======================
+*/
+.about-img,
+.about-info {
+  padding: 2rem 0;
+}
+
+.about-picture-container {
+  background: #678e3e;
+  border: 0.5rem solid #678e3e;
+  max-width: 30rem;
+  overflow: hidden;
+}
+
+.about-picture {
+  transition: var(--transition);
+}
+
+.about-picture-container:hover .about-picture {
+  opacity: 0.5;
+  transform: scale(1.2);
+}
+
+.about-text {
+  max-width: 26rem;
+  color: #617d98;
+}
+
+@media screen and (min-width: 992px) {
+  .about-img,
+  .about-info {
+    float: left;
+    width: 50%;
+  }
+
+  .about-info {
+    padding-left: 2rem;
   }
 }
