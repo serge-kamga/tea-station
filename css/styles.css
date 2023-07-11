@@ -156,7 +156,78 @@ p {
 
 /* 
 ======================
-Nav
+Animation
+======================
+*/
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-200px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(50px);
+    opacity: 0.75;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(200px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(-50px);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes show {
+  0% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* 
+======================
+Navbar
 ======================
 */
 .nav-btn {
@@ -167,6 +238,7 @@ Nav
   color: var(--clr-primary);
   z-index: 2;
   cursor: pointer;
+  animation: bounce 2s ease infinite;
 }
 
 .navbar {
@@ -239,7 +311,7 @@ Header
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url('../images/main-bcg.jpeg') center/cover no-repeat fixed;
   position: relative;
-  /* animation */
+
   overflow-x: hidden;
 }
 
@@ -255,6 +327,7 @@ Header
   font-family: 'Grand Hotel', cursive;
   color: #678e3e;
   letter-spacing: 0.4rem;
+  animation: slideFromRight 5s ease-in-out 1;
 }
 
 .banner h1 {
@@ -262,6 +335,7 @@ Header
   color: white;
   margin-top: 1.25rem;
   margin-bottom: 2rem;
+  animation: slideFromLeft 5s ease-in-out 1;
 }
 
 .banner-btn {
@@ -269,6 +343,7 @@ Header
   outline-offset: 0.25rem;
   font-size: 1.25rem;
   padding: 1rem 1.75rem;
+  animation: show 5s linear 1;
 }
 
 /* Content divider */
