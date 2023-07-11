@@ -9,5 +9,3 @@ navBtn.addEventListener('click', () => {
 navClose.addEventListener('click', () => {
   navbar.classList.remove('showNav');
 });
-const date = document.getElementById('date');
-date.innerHTML(new Date().getFullYear());

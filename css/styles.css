@@ -156,6 +156,81 @@ p {
 
 /* 
 ======================
+Nav
+======================
+*/
+.nav-btn {
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  font-size: 2.5rem;
+  color: var(--clr-primary);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: var(--clr-grey-10);
+  z-index: 3;
+  box-shadow: 2px 0 2px rgba(0, 0, 0, 0.3);
+  /* hide navbar */
+  transform: translateX(-100%);
+  transition: var(--transition);
+}
+.showNav {
+  transform: translate(0);
+}
+
+.navbar-header {
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.nav-close {
+  cursor: pointer;
+  color: #f29c9c;
+  transition: var(--transition);
+}
+
+.nav-close:hover {
+  color: #bbb;
+}
+
+.nav-items {
+  list-style-type: none;
+}
+
+.nav-link {
+  display: block;
+  font-size: 1.5rem;
+  padding: 0.25rem 1rem;
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+  color: var(--clr-grey-5);
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  background-color: var(--clr-primary-light);
+  color: var(--clr-primary);
+  padding-left: 1.5rem;
+  border-left: 0.25rem solid var(--clr-primary);
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    width: 30vw;
+    max-width: 30rem;
+  }
+}
+
+/* 
+======================
 Header
 ======================
 */
